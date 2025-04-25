@@ -111,7 +111,7 @@
     }
 
     .carousel-track img {
-      width: 100%;
+      width: 25%;
       flex-shrink: 0;
       height: auto;
       object-fit: cover;
@@ -203,11 +203,14 @@
     <div class="portfolio-carousel">
       <div class="carousel-track" id="carouselTrack">
         <img src="assets/images/Benz.jpg" alt="MercedesBenz" loading="lazy">
-        <img src="assets/images/CloseBacksplash.jpg" alt="Backsplash" loading="lazy">
-        <img src="assets/images/CloseHandles.jpg" alt="Handles" loading="lazy">
+        <img src="assets/images/VillaDining.jpg" alt="VillaDining" loading="lazy">
+        <img src="assets/images/VillaLiving.jpg" alt="VillaLiving" loading="lazy">
         <img src="assets/images/LivingRoom.jpg" alt="Living Room" loading="lazy">
         <img src="assets/images/LivingRoomwhite.jpg" alt="White Living Room" loading="lazy">
         <img src="assets/images/Miata.jpg" alt="Yellow Miata" loading="lazy">
+        <img src="assets/images/LivingRoomWide.jpg" alt="LivingRoom" loading="lazy">
+        <img src="assets/images/VillaLiving2.jpg" alt="Villa Living 2" loading="lazy">
+        <img src="assets/images/WRXRoller.jpg" alt="Motion Picture of a Car" loading="lazy">
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
@@ -257,13 +260,15 @@
 
     function moveSlide(direction) {
       const slides = track.children.length;
+      const visibleSlides = 4; // Show 4 images at a time
+      const maxIndex = Math.ceil(slides / visibleSlides) - 1;
+
       index += direction;
+      if (index < 0) index = maxIndex;
+      if (index > maxIndex) index = 0;
 
-      if (index < 0) index = slides - 1;
-      if (index >= slides) index = 0;
-
-      const width = track.clientWidth;
-      track.style.transform = `translateX(-${index * width}px)`;
+      const slideWidth = track.clientWidth / visibleSlides;
+      track.style.transform = `translateX(-${index * slideWidth * visibleSlides}px)`;
     }
   </script>
 </body>
