@@ -107,15 +107,16 @@
 
     .carousel-track {
       display: flex;
+      gap: 16px;
       transition: transform 0.5s ease;
     }
 
     .carousel-track img {
-      width: 25%;
-      flex-shrink: 0;
-      height: auto;
+      width: 300px;
+      height: 200px;
       object-fit: cover;
       border-radius: 8px;
+      flex-shrink: 0;
     }
 
     .carousel-buttons {
@@ -267,7 +268,7 @@
       if (index < 0) index = maxIndex;
       if (index > maxIndex) index = 0;
 
-      const slideWidth = track.clientWidth / visibleSlides;
+      const slideWidth = 300 + 16; // 300px image width + 16px gap
       track.style.transform = `translateX(-${index * slideWidth * visibleSlides}px)`;
     }
   </script>
