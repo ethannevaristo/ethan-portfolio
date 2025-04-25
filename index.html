@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ethan Evaristo | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -11,6 +11,10 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -91,37 +95,55 @@
       margin-bottom: 2rem;
     }
 
-    /* Portfolio Styles */
-    .portfolio-photos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
+    /* Portfolio Carousel Styles */
+    .portfolio-carousel {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      margin-top: 2rem;
     }
 
-    .portfolio-photos img {
+    .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+    }
+
+    .carousel-track img {
       width: 300px;
       height: auto;
       object-fit: cover;
+      margin-right: 16px;
       border-radius: 8px;
-      transition: transform 0.3s ease;
     }
 
-    .portfolio-photos img:hover {
-      transform: scale(1.05);
+    /* Pause the animation on hover */
+    .portfolio-carousel:hover .carousel-track {
+      animation-play-state: paused;
     }
 
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Video Gallery */
     .portfolio-videos {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
       justify-content: center;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     .portfolio-videos video {
       width: 300px;
-      height: auto;
+      height: 200px;
+      object-fit: cover;
       border-radius: 8px;
     }
 
@@ -167,18 +189,20 @@
   <section id="portfolio">
     <h2>My Work</h2>
 
-    <!-- Photo Gallery -->
-    <div class="portfolio-photos">
-      <img src="assets/images/Benz.jpg" alt="MercedesBenz">
-      <img src="assets/images/CloseBacksplash.jpg" alt="Backsplash">
-      <img src="assets/images/CloseHandles.jpg" alt="Handles">
-      <img src="assets/images/LivingRoom.jpg" alt="Living Room">
-      <img src="assets/images/LivingRoomwhite.jpg" alt="White Living Room">
-      <img src="assets/images/Miata.jpg" alt="Yellow Miata">
-      <img src="assets/images/VillaLiving.jpg" alt="Living Room of a Dominican Villa">
-      <img src="assets/images/WRXGarage.jpg" alt="WRX">
-      <img src="assets/images/LivingRoomWide.jpg" alt="Wide shot of a living Room">
-      <!-- Add more photos by duplicating the line above -->
+    <!-- Photo Gallery Carousel -->
+    <div class="portfolio-carousel">
+      <div class="carousel-track">
+        <img src="assets/images/Benz.jpg" alt="MercedesBenz">
+        <img src="assets/images/CloseBacksplash.jpg" alt="Backsplash">
+        <img src="assets/images/CloseHandles.jpg" alt="Handles">
+        <img src="assets/images/LivingRoom.jpg" alt="Living Room">
+        <img src="assets/images/LivingRoomwhite.jpg" alt="White Living Room">
+        <img src="assets/images/Miata.jpg" alt="Yellow Miata">
+        <img src="assets/images/VillaLiving.jpg" alt="Living Room of a Dominican Villa">
+        <img src="assets/images/WRXGarage.jpg" alt="WRX">
+        <img src="assets/images/LivingRoomWide.jpg" alt="Wide shot of a Living Room">
+        <!-- You can add more photos -->
+      </div>
     </div>
 
     <!-- Video Gallery -->
@@ -193,7 +217,6 @@
         <source src="assets/videos/video2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <!-- Add more videos by duplicating the block above -->
     </div>
   </section>
 
