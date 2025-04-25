@@ -1,276 +1,44 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ethan Evaristo | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan Evaristo | Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #0e0e0e;
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
-      background: #0e0e0e;
-    }
-
-    header h1 {
-      font-size: 2rem;
-    }
-
-    nav a {
-      color: #fff;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ff9900;
-    }
-
-    .hero {
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: url('https://your-thumbnail-or-video-frame.jpg') center/cover no-repeat;
-      position: relative;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-text {
-      text-align: center;
-      z-index: 2;
-    }
-
-    .hero-text h2 {
-      font-size: 3rem;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      color: #ddd;
-    }
-
-    section {
-      padding: 4rem 2rem;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    /* Manual Slider Styles */
-    .portfolio-carousel {
-      position: relative;
-      width: 90%;
-      max-width: 1000px;
-      margin: 2rem auto;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    .carousel-track {
-      display: flex;
-      gap: 16px;
-      transition: transform 0.5s ease;
-    }
-
-    .carousel-track img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 8px;
-      flex-shrink: 0;
-    }
-
-    .carousel-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-
-    .carousel-button {
-      background: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      padding: 1rem;
-      cursor: pointer;
-      font-size: 1.5rem;
-      transition: background 0.3s ease;
-    }
-
-    .carousel-button:hover {
-      background: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Video Gallery */
-    .portfolio-videos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
-      margin-top: 3rem;
-    }
-
-    .portfolio-videos video {
-      width: 300px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    /* About & Contact */
-    .about, .contact {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .contact p {
-      margin-top: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #111;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background: #0e0e0e; color: #fff; }
+    nav a { color: #fff; margin-left: 2rem; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: #ff9900; }
+    header, footer { text-align: center; padding: 2rem; background: #0e0e0e; }
+    .hero { height: 90vh; display: flex; justify-content: center; align-items: center; background: url('https://your-thumbnail-or-video-frame.jpg') center/cover no-repeat; position: relative; }
+    .hero-overlay { background: rgba(0,0,0,0.6); position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; align-items: center; }
+    .hero-text { text-align: center; }
+    .hero-text h2 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero-text p { font-size: 1.2rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Ethan Evaristo</h1>
     <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-overlay">
       <div class="hero-text">
-        <h2>Visual Storyteller</h2>
+        <h2>Ethan Evaristo</h2>
         <p>Photography | Videography | Filmmaking</p>
       </div>
-    </div>
-  </section>
-
-  <section id="portfolio">
-    <h2>My Work</h2>
-
-    <!-- Manual Photo Slider -->
-    <div class="portfolio-carousel">
-      <div class="carousel-track" id="carouselTrack">
-        <img src="assets/images/Benz.jpg" alt="MercedesBenz" loading="lazy">
-        <img src="assets/images/VillaDining.jpg" alt="VillaDining" loading="lazy">
-        <img src="assets/images/VillaLiving.jpg" alt="VillaLiving" loading="lazy">
-        <img src="assets/images/LivingRoom.jpg" alt="Living Room" loading="lazy">
-        <img src="assets/images/LivingRoomwhite.jpg" alt="White Living Room" loading="lazy">
-        <img src="assets/images/Miata.jpg" alt="Yellow Miata" loading="lazy">
-        <img src="assets/images/LivingRoomWide.jpg" alt="LivingRoom" loading="lazy">
-        <img src="assets/images/VillaLiving2.jpg" alt="Villa Living 2" loading="lazy">
-        <img src="assets/images/WRXRoller.jpg" alt="Motion Picture of a Car" loading="lazy">
-      </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
-      </div>
-    </div>
-
-    <!-- Video Gallery -->
-    <h3 style="text-align: center; font-size: 1.5rem; margin: 3rem 0 1rem;">Short Form Videos</h3>
-    <div class="portfolio-videos">
-      <video controls preload="none">
-        <source src="assets/videos/video1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-
-      <video controls preload="none">
-        <source src="assets/videos/video2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about">
-      <p>
-        I'm Ethan, a passionate photographer, filmmaker, and visual artist based in Toronto. My work focuses on storytelling through cinematic visuals, whether it's behind the camera or at the editing desk.
-      </p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <p>Email: ethan@example.com</p>
-      <p>Instagram: @ethanevaristo</p>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Ethan Evaristo. All rights reserved.</p>
   </footer>
-
-  <script>
-    const track = document.getElementById('carouselTrack');
-    let index = 0;
-
-    function moveSlide(direction) {
-      const slides = track.children.length;
-      const visibleSlides = 4; // Show 4 images at a time
-      const maxIndex = Math.ceil(slides / visibleSlides) - 1;
-
-      index += direction;
-      if (index < 0) index = maxIndex;
-      if (index > maxIndex) index = 0;
-
-      const slideWidth = 300 + 16; // 300px image width + 16px gap
-      track.style.transform = `translateX(-${index * slideWidth * visibleSlides}px)`;
-    }
-  </script>
 </body>
 </html>
