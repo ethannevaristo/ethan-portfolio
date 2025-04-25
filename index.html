@@ -115,9 +115,12 @@
       object-fit: cover;
       margin-right: 16px;
       border-radius: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+      animation-delay: var(--delay, 0s);
     }
 
-    /* Pause the animation on hover */
     .portfolio-carousel:hover .carousel-track {
       animation-play-state: paused;
     }
@@ -128,6 +131,13 @@
       }
       100% {
         transform: translateX(-50%);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -192,28 +202,27 @@
     <!-- Photo Gallery Carousel -->
     <div class="portfolio-carousel">
       <div class="carousel-track">
-        <img src="assets/images/Benz.jpg" alt="MercedesBenz">
-        <img src="assets/images/CloseBacksplash.jpg" alt="Backsplash">
-        <img src="assets/images/CloseHandles.jpg" alt="Handles">
-        <img src="assets/images/LivingRoom.jpg" alt="Living Room">
-        <img src="assets/images/LivingRoomwhite.jpg" alt="White Living Room">
-        <img src="assets/images/Miata.jpg" alt="Yellow Miata">
-        <img src="assets/images/VillaLiving.jpg" alt="Living Room of a Dominican Villa">
-        <img src="assets/images/WRXGarage.jpg" alt="WRX">
-        <img src="assets/images/LivingRoomWide.jpg" alt="Wide shot of a Living Room">
-        <!-- You can add more photos -->
+        <img src="assets/images/Benz.jpg" alt="MercedesBenz" loading="lazy">
+        <img src="assets/images/CloseBacksplash.jpg" alt="Backsplash" loading="lazy">
+        <img src="assets/images/CloseHandles.jpg" alt="Handles" loading="lazy">
+        <img src="assets/images/LivingRoom.jpg" alt="Living Room" loading="lazy">
+        <img src="assets/images/LivingRoomwhite.jpg" alt="White Living Room" loading="lazy">
+        <img src="assets/images/Miata.jpg" alt="Yellow Miata" loading="lazy">
+        <img src="assets/images/VillaLiving.jpg" alt="Living Room of a Dominican Villa" loading="lazy">
+        <img src="assets/images/WRXGarage.jpg" alt="WRX" loading="lazy">
+        <img src="assets/images/LivingRoomWide.jpg" alt="Wide shot of a Living Room" loading="lazy">
       </div>
     </div>
 
     <!-- Video Gallery -->
     <h3 style="text-align: center; font-size: 1.5rem; margin: 3rem 0 1rem;">Short Form Videos</h3>
     <div class="portfolio-videos">
-      <video controls>
+      <video controls preload="none">
         <source src="assets/videos/video1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
-      <video controls>
+      <video controls preload="none">
         <source src="assets/videos/video2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
