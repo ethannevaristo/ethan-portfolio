@@ -1,0 +1,56 @@
+<!-- portfolio.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan Evaristo | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background: #0e0e0e; color: #fff; }
+    nav a { color: #fff; margin-left: 2rem; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: #ff9900; }
+    header, footer { text-align: center; padding: 2rem; background: #0e0e0e; }
+    section { padding: 4rem 2rem; }
+    h2 { text-align: center; margin-bottom: 2rem; }
+    .portfolio-photos, .portfolio-videos { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .portfolio-photos img, .portfolio-videos video { width: 300px; height: 200px; object-fit: cover; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ethan Evaristo</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Photo Gallery</h2>
+    <div class="portfolio-photos">
+        <img src="assets/images/Benz.jpg" alt="MercedesBenz" loading="lazy">
+        <img src="assets/images/VillaDining.jpg" alt="VillaDining" loading="lazy">
+        <img src="assets/images/VillaLiving.jpg" alt="VillaLiving" loading="lazy">
+        <img src="assets/images/LivingRoom.jpg" alt="Living Room" loading="lazy">
+        <img src="assets/images/LivingRoomwhite.jpg" alt="White Living Room" loading="lazy">
+        <img src="assets/images/Miata.jpg" alt="Yellow Miata" loading="lazy">
+        <img src="assets/images/LivingRoomWide.jpg" alt="LivingRoom" loading="lazy">
+        <img src="assets/images/VillaLiving2.jpg" alt="Villa Living 2" loading="lazy">
+        <img src="assets/images/WRXRoller.jpg" alt="Motion Picture of a Car" loading="lazy">
+      </div>
+
+    <h2 style="margin-top: 4rem;">Short Form Videos</h2>
+    <div class="portfolio-videos">
+      <video controls preload="none"><source src="assets/videos/video1.mp4" type="video/mp4"></video>
+      <video controls preload="none"><source src="assets/videos/video2.mp4" type="video/mp4"></video>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ethan Evaristo. All rights reserved.</p>
+  </footer>
+</body>
+</html>
