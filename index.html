@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ethan Evaristo | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #0e0e0e;
       color: #fff;
+      line-height: 1.6;
     }
 
     header {
@@ -24,7 +25,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 2rem;
-      background-color: #111;
+      background: #0e0e0e;
     }
 
     header h1 {
@@ -33,9 +34,10 @@
 
     nav a {
       color: #fff;
-      margin-left: 1.5rem;
+      margin-left: 2rem;
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -44,10 +46,10 @@
 
     .hero {
       height: 90vh;
-      background: url('assets/hero-image.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: url('https://your-thumbnail-or-video-frame.jpg') center/cover no-repeat;
       position: relative;
     }
 
@@ -55,19 +57,23 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.5);
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .hero-text {
-      position: relative;
       text-align: center;
       z-index: 2;
     }
 
     .hero-text h2 {
       font-size: 3rem;
+      color: #fff;
+      margin-bottom: 1rem;
     }
 
     .hero-text p {
@@ -79,30 +85,55 @@
       padding: 4rem 2rem;
     }
 
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
 
-    .portfolio-item {
-      background-color: #1c1c1c;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s;
+    /* Portfolio Styles */
+    .portfolio-photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
     }
 
-    .portfolio-item:hover {
-      transform: scale(1.03);
+    .portfolio-photos img {
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
     }
 
-    .portfolio-item img {
-      width: 100%;
-      display: block;
+    .portfolio-photos img:hover {
+      transform: scale(1.05);
     }
 
-    .portfolio-item h3 {
-      padding: 1rem;
+    .portfolio-videos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .portfolio-videos video {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* About & Contact */
+    .about, .contact {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact p {
+      margin-top: 1rem;
     }
 
     footer {
@@ -110,6 +141,7 @@
       padding: 2rem;
       background-color: #111;
       font-size: 0.9rem;
+      color: #aaa;
     }
   </style>
 </head>
@@ -124,41 +156,66 @@
   </header>
 
   <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-text">
-      <h2>Visual Storyteller</h2>
-      <p>Photography | Videography | Filmmaking</p>
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h2>Visual Storyteller</h2>
+        <p>Photography | Videography | Filmmaking</p>
+      </div>
     </div>
   </section>
 
   <section id="portfolio">
     <h2>My Work</h2>
-    <div class="portfolio">
-      <!-- Plug in your own images and links here -->
-      <div class="portfolio-item">
-        <img src="assets/sample1.jpg" alt="Project 1">
-        <h3>Client Reel – Kitchen Renovation</h3>
-      </div>
-      <div class="portfolio-item">
-        <img src="assets/sample2.jpg" alt="Project 2">
-        <h3>Short Film – "Untitled Dream"</h3>
-      </div>
-      <!-- Duplicate as needed -->
+
+    <!-- Photo Gallery -->
+    <div class="portfolio-photos">
+      <img src="assets/images/Benz.jpg" alt="MercedesBenz">
+      <img src="assets/images/CloseBacksplash.jpg" alt="Backsplash">
+      <img src="assets/images/CloseHandles.jpg" alt="Handles">
+      <img src="assets/images/LivingRoom.jpg" alt="Living Room">
+      <img src="assets/images/LivingRoomwhite.jpg" alt="White Living Room">
+      <img src="assets/images/Miata.jpg" alt="Yellow Miata">
+      <img src="assets/images/VillaLiving.jpg" alt="Living Room of a Dominican Villa">
+      <img src="assets/images/WRXGarage.jpg" alt="WRX">
+      <img src="assets/images/LivingRoomWide.jpg" alt="Wide shot of a living Room">
+      <!-- Add more photos by duplicating the line above -->
+    </div>
+
+    <!-- Video Gallery -->
+    <h3 style="text-align: center; font-size: 1.5rem; margin: 3rem 0 1rem;">Short Form Videos</h3>
+    <div class="portfolio-videos">
+      <video controls>
+        <source src="assets/videos/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <video controls>
+        <source src="assets/videos/video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <!-- Add more videos by duplicating the block above -->
     </div>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a Toronto-based photographer, videographer, and filmmaker. I specialize in crafting visual stories that blend cinematic feel with everyday moments.</p>
+    <div class="about">
+      <p>
+        I'm Ethan, a passionate photographer, filmmaker, and visual artist based in Toronto. My work focuses on storytelling through cinematic visuals, whether it's behind the camera or at the editing desk.
+      </p>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Reach out at <a href="mailto:ethanevaristo@email.com" style="color:#ff9900">ethanevaristo@email.com</a></p>
+    <div class="contact">
+      <p>Email: ethan@example.com</p>
+      <p>Instagram: @ethanevaristo</p>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Ethan Evaristo. All rights reserved.
+    <p>&copy; 2025 Ethan Evaristo. All rights reserved.</p>
   </footer>
 </body>
 </html>
