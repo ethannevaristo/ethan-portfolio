@@ -17,7 +17,6 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #0e0e0e;
       color: #fff;
-      line-height: 1.6;
     }
 
     header {
@@ -25,7 +24,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 2rem;
-      background: #0e0e0e;
+      background-color: #111;
     }
 
     header h1 {
@@ -34,10 +33,9 @@
 
     nav a {
       color: #fff;
-      margin-left: 2rem;
+      margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -46,10 +44,10 @@
 
     .hero {
       height: 90vh;
+      background: url('assets/hero-image.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url('https://your-thumbnail-or-video-frame.jpg') center/cover no-repeat;
       position: relative;
     }
 
@@ -57,28 +55,61 @@
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
     }
 
     .hero-text {
+      position: relative;
       text-align: center;
       z-index: 2;
     }
 
     .hero-text h2 {
       font-size: 3rem;
-      color: #fff;
-      margin-bottom: 1rem;
     }
 
     .hero-text p {
       font-size: 1.2rem;
       color: #ddd;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .portfolio-item {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.03);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .portfolio-item h3 {
+      padding: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -93,36 +124,41 @@
   </header>
 
   <section class="hero">
-    <div class="hero-overlay">
-      <div class="hero-text">
-        <h2>Visual Storyteller</h2>
-        <p>Photography | Videography | Filmmaking</p>
-      </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h2>Visual Storyteller</h2>
+      <p>Photography | Videography | Filmmaking</p>
     </div>
   </section>
 
-  <!-- More sections coming next: Portfolio, About, Contact -->
+  <section id="portfolio">
+    <h2>My Work</h2>
+    <div class="portfolio">
+      <!-- Plug in your own images and links here -->
+      <div class="portfolio-item">
+        <img src="assets/sample1.jpg" alt="Project 1">
+        <h3>Client Reel – Kitchen Renovation</h3>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/sample2.jpg" alt="Project 2">
+        <h3>Short Film – "Untitled Dream"</h3>
+      </div>
+      <!-- Duplicate as needed -->
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a Toronto-based photographer, videographer, and filmmaker. I specialize in crafting visual stories that blend cinematic feel with everyday moments.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Reach out at <a href="mailto:ethanevaristo@email.com" style="color:#ff9900">ethanevaristo@email.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Ethan Evaristo. All rights reserved.
+  </footer>
 </body>
 </html>
-
-
-<!-- Portfolio Section -->
-<section id="portfolio">
-  <h2>My Portfolio</h2>
-  <div class="portfolio-grid">
-    <!-- Example portfolio items -->
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/300" alt="Photo 1">
-      <p>Project Name</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/300" alt="Photo 2">
-      <p>Project Name</p>
-    </div>
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/300" alt="Photo 3">
-      <p>Project Name</p>
-    </div>
-    <!-- Add more items here -->
-  </div>
-</section>
